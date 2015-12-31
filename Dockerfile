@@ -22,3 +22,7 @@ RUN apt-get update \
 
 WORKDIR /app
 
+RUN git clone https://github.com/letsencrypt/letsencrypt \
+    && cd letsencrypt \
+    && ./letsencrypt-auto --help
+
